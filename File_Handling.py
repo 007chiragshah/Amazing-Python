@@ -17,6 +17,8 @@
 '''
 f = open("demo.txt")
 #print(f.read())      #for reading all data
+print(f.tell())   #if we want to know where is our pointer then we need to use this function
+print(f.seek(0))   #To print from 0 again then we can use this function we can change value according to print
 print(f.readline())   #read only first line
 print(f.readline())   #read second line
 print(f.read(5))      #pass only 5 char
@@ -46,8 +48,10 @@ f1.write("Hayeeeee  oyeeeeee")
 f2 = open("demo1.txt", "r")
 f2.read()
 
-
-
+#file open with block
+with open("chirag.txt") as f:
+    a = f.readlines()
+    print(a)
 
 #Copy the file
 
