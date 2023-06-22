@@ -128,7 +128,7 @@ print("date time in string: ",st)
 #Time delta
 
 #use to calculate the difference between time and also used to manipulate the dates
-#syntax = datetime.timedelta = (month = 0,sec=0,micrisec=0,millisec=0,hour=0,min=0,days=0)
+#syntax = datetime.timedelta = (sec=0,micrisec=0,millisec=0,hour=0,min=0,days=0)
 now = datetime.now()
 
 print(now)
@@ -148,7 +148,18 @@ print(time_diff.days)
 print(time_diff.seconds)
 
 #many operator supported by timedelta
+#relative delta is also can be used for data for days, weekdays, leapdays, monthdays, etc
+whithout s parameter means month instead of months means it will directly minus that day
+for example if we pass month=2 in relativedelta it will substract month 2 from this
 
+from dateutil.relativedelta import *
+#syntax = relativedelta(year, month, day, hour, minute, second, microseco
+now = datetime.now()
+
+print(now)
+
+date_before_2_years = now + timedelta(hours=16080)  #here you can put any thing from syntax
+date_before_2_days = now + timedelta(days=2)
 #----------------------------------------------------------------------------------------------------------------------
 
 
